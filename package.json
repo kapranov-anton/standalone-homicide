@@ -1,0 +1,24 @@
+{
+  "name": "standalone-homicide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "nw": "react-scripts build && cp package.json build/package.json && nw build/",
+    "nw-builder": "react-scripts build && cp package.json build/package.json && nwbuild --platforms win32,win64,linux64 --buildDir dist/ build/"
+  },
+  "devDependencies": {
+    "nw": "^0.23.6-1",
+    "nw-builder": "^3.4.1"
+  },
+  "main": "index.html"
+}
