@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dialogs": "^1.1.20",
     "immutable": "^3.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-markdown": "^2.5.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
@@ -13,12 +15,19 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "electron": "electron .",
+    "pack": "electron-builder -w --dir",
     "nw": "react-scripts build && cp package.json build/package.json && nw build/",
     "nw-builder": "react-scripts build && cp package.json build/package.json && nwbuild --platforms win32,win64,linux64 --buildDir dist/ build/"
   },
   "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-builder": "^19.16.2",
     "nw": "^0.23.6-1",
     "nw-builder": "^3.4.1"
   },
-  "main": "index.html"
+  "window": {
+    "toolbar": true
+  },
+  "main": "electron.js"
 }
