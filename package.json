@@ -15,10 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron": "electron .",
-    "pack": "electron-builder -w --dir",
-    "nw": "react-scripts build && cp package.json build/package.json && nw build/",
-    "nw-builder": "react-scripts build && cp package.json build/package.json && nwbuild --platforms win32,win64,linux64 --buildDir dist/ build/"
+    "electron": "cp electron.js package.json build/ && electron build",
+    "pack": "cp electron.js package.json build/ && electron-builder -w --dir --projectDir build"
   },
   "devDependencies": {
     "electron": "^1.6.11",
@@ -29,5 +27,6 @@
   "window": {
     "toolbar": true
   },
-  "main": "electron.js"
+  "main": "electron.js",
+  "homepage": "./"
 }
