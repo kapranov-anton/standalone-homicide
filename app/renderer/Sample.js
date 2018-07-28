@@ -4,7 +4,7 @@ import Markdown from 'react-markdown';
 class Editor extends Component {
     _textarea: null
 
-    state ={
+    state = {
         edit: false,
     }
 
@@ -38,7 +38,7 @@ export default class Sample extends Component {
             <a href='#/' onClick={goBack}>← Вернуться</a>
             <h1>{sample.name}</h1>
             <Editor value={sample.investigation} onSave={this.onSave('investigation')} />
-            <Editor value={sample.trial} onSave={this.onSave('investigation')} />
+            <Editor value={sample.trial} onSave={this.onSave('trial')} />
         </div>
     }
 }
