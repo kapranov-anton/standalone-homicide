@@ -8,8 +8,9 @@ const {remote} = window.require('electron');
 const Dialogs = window.require('dialogs');
 const dialogs = Dialogs({cancel: 'Отмена'});
 
-const dbFile = path.join(remote.app.getAppPath(), 'homicide.db');
-const tempDbFile = path.join(remote.app.getAppPath(), 'homicide.temp');
+const dataPath = remote.app.getPath('userData')
+const dbFile = path.join(dataPath, 'homicide.db');
+const tempDbFile = path.join(dataPath, 'homicide.temp');
 const loadDb = () =>
     new Database(
         fs.existsSync(dbFile)
