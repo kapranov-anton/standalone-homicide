@@ -6,6 +6,10 @@ button {
     margin-right: 1em;
 }
 
+.dialog-widget button {
+    margin-right: 0;
+}
+
 h1, h2 {
     letter-spacing: 0.02em;
     font-weight: normal;
@@ -14,4 +18,8 @@ h1, h2 {
 textarea {
     width: 100%;
     min-height: 20em;
+}
+
+* {
+    box-sizing: border-box;
 }
