@@ -37,7 +37,11 @@ export default class Sample extends Component {
         return <div>
             <a href='#/' onClick={goBack}>← Вернуться</a>
             <h1>{sample.name}</h1>
+            <hr />
+            <h2>Ситуации предварительного следствия</h2>
             <Editor value={sample.investigation} onSave={this.onSave('investigation')} />
+            <hr />
+            <h2>Ситуации судебного следствия</h2>
             <Editor value={sample.trial} onSave={this.onSave('trial')} />
         </div>
     }
